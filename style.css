@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #647df9;
+}
+
+
+
+.plan {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 2rem;
+ flex-wrap: wrap;
+    
+}
+
+
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 420px;
+    width: 300px;
+    background: white;
+    position: relative;
+}
+
+.dp-1 p::selection {
+    background-color: #ffd861;
+}
+
+.dp-2 p::selection {
+    background-color: #A020F0;
+}
+
+
+.dp-3 p::selection {
+    background-color: #39FF14;
+}
+
+
+
+.description .price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 45px;
+    font-weight: 500;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ffd861;
+    border: 2px solid #ffd861;
+    color: white;
+    padding: 3px;
+    background-clip: content-box;
+}
+
+.yellow::selection {
+    background-color: #ffd861;
+}
+.description .pi-2 {
+    background-color: #A020F0;
+    border: 2px solid #A020F0;
+}
+
+
+.description .pi-3 {
+    background-color:  #39FF14;
+    border: 2px solid  #39FF14;
+}
+
+
+.description .ribbon {
+    height: 150px;
+    width: 140px;
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    overflow: hidden;
+
+}
+
+.description .ribbon::before,
+.description .ribbon::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    display: block;
+    border: 7px solid #4606ac;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
+.description .ribbon::before {
+    top: 0px;
+    right: 15px;
+}
+
+.description .ribbon::after {
+    bottom: 29px;
+    left: 5px;
+}
+
+
+
+.description .ribbon span {
+    position: absolute;
+    background: #A020F0;
+    width: 190px;
+    padding: 12px 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    top: 30px;
+    right: 0px;
+    transform: rotate(-45deg);
+}
+
+
+
+
+
+.description .price::before {
+    position: absolute;
+    content: '$';
+    font-size: 25px;
+    font-weight: 400;
+    margin-right: 55px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+
+.line-1 {
+    width: 70%;
+    height: 2px;
+    background-color: #ffd861;
+    
+}
+
+.line-1::before{
+   position: absolute;
+   content: 'Basic';
+   margin-left: 65px;
+   margin-top: -10px;
+   background: #fff;
+   font-size: 25px;
+   font-weight: 500;
+   padding: 0 15px;
+}
+
+.line-2 {
+    width: 70%;
+    height: 2px;
+    background-color: #A020F0;
+    
+}
+
+.line-2::before{
+   position: absolute;
+   content: 'Premium';
+   margin-left: 50px;
+   margin-top: -10px;
+   background: #fff;
+   font-size: 25px;
+   font-weight: 500;
+   padding: 0 15px;
+}
+
+.line-3 {
+    width: 70%;
+    height: 2px;
+    background-color: #39FF14;
+    
+}
+
+.line-3::before{
+   position: absolute;
+   content: 'Ultimate';
+   margin-left: 50px;
+   margin-top: -10px;
+   background: #fff;
+   font-size: 25px;
+   font-weight: 500;
+   padding: 0 15px;
+}
+
+.description .offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 25px;
+    
+}
+
+.description .offer p {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 18px;
+}
+
+
+.material-symbols-outlined {
+    color: green;
+}
+
+.close {
+    color: red;
+}
+
+button {
+    padding: 10px 65px;
+    border-radius: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.button-1 {
+    background-color: #ffd861;
+    color: white;
+    font-size: 18px;
+    border: 2px solid #ffd861;
+}
+
+.button-1:hover {
+    background-color: white;
+    color: #ffd861;
+    border: 2px solid #ffd861;
+}
+
+.button-2 {
+    background-color: #A020F0;
+    color: white;
+    font-size: 18px;
+    border: 2px solid #A020F0;
+}
+
+.button-2:hover {
+    background-color: white;
+    color: #A020F0;
+    border: 2px solid #A020F0;
+}
+
+.button-3 {
+    background-color: #39FF14;
+    color: white;
+    font-size: 18px;
+    border: 2px solid #39FF14;
+}
+
+.button-3:hover {
+    background-color: white;
+    color: #39FF14;
+    border: 2px solid #39FF14;
+}
+
+
+@media screen and (max-width:600px) {
+    .plan {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+}
+
+
+@media screen and (max-width:990px) {
+    .plan {
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+
+
